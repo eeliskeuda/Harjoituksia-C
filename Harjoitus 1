@@ -1,0 +1,28 @@
+using System;
+
+namespace Harjoituksia_C1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Pyydetään käyttäjältä kaksi lukua ja tallennetaan ne muuttujiin luku1 ja luku2
+            Console.Write("Syötä 1. luku: ");
+            int luku1 = int.Parse(Console.ReadLine());
+            Console.Write("Syötä 2. luku: ");
+            int luku2 = int.Parse(Console.ReadLine());
+            // if rakenne jolla vertaamme lukuja
+            if(luku1 < luku2)
+            {
+                // Tulostetaan jos luku1 on pienempi
+                Console.WriteLine("Luvut suuruusjärjestyksessä ovat: {0} {1}", luku1, luku2);
+            }
+            else
+            {
+                // Tulostetaan jos luku1 on suurempi
+                Console.WriteLine("Luvut suuruusjärjestyksessä ovat: {0} {1}", luku2, luku1);
+            }
+
+        }
+    }
+}
