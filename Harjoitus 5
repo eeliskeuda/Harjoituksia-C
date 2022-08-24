@@ -7,18 +7,20 @@ namespace Harjoituksia_C5
         static void Main(string[] args)
         {
             // Kysytään käyttäjältä mitä hän haluaa syöttää, käyttäjä valitsee numeroista 1-3
-            Console.WriteLine("Mitä haluat syöttää? (valitse 1-3)");
+            Console.WriteLine("Mitä haluat syöttää? (valitse numerolla)");
             Console.WriteLine("1. Kokonaisluku");
             Console.WriteLine("2. Double-luku");
             Console.WriteLine("3. Merkkijono");
             // Tallennetaan käyttäjän valitsema numero
             int syote = int.Parse(Console.ReadLine());
-            // Switch case rakenne
+            // Switch case rakenne valitsee käyttäjän haluaman syötteen
             switch (syote)
             {
                 case 1:
+                    // Pyydetään käyttäjää syöttämään valitsemansa syöte
                     Console.Write("Syötä kokonaisluku: ");
                     int kokonaisluku = int.Parse(Console.ReadLine());
+                    // Lisätään lukuun 1 ja tulostetaan se
                     Console.WriteLine(kokonaisluku + 1);
                     break;
                 case 2:
@@ -29,7 +31,8 @@ namespace Harjoituksia_C5
                 case 3:
                     Console.Write("Syötä merkkijono: ");
                     string merkkijono = Console.ReadLine();
-                    Console.WriteLine(merkkijono, "*");
+                    // Lisätään merkkijonoon * ja tulostetaan se
+                    Console.WriteLine(merkkijono + "*");
                     break;
                 default:
                     Console.WriteLine("Syöte virheellinen.");
