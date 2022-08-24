@@ -1,0 +1,39 @@
+using System;
+
+namespace Harjoituksia_C4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Pyydetään käyttäjältä 5 lukua ja tallennetaan ne
+            Console.WriteLine("Syötä 5 kokonaislukua ja tulostan niistä suurimman: ");
+            int luku1 = int.Parse(Console.ReadLine());
+            int luku2 = int.Parse(Console.ReadLine());
+            int luku3 = int.Parse(Console.ReadLine());
+            int luku4 = int.Parse(Console.ReadLine());
+            int luku5 = int.Parse(Console.ReadLine());
+            // if rakenne joka vertaa tallennettuja lukuja ja tulostaa suurimman niistä
+            if (luku1 > luku2 && luku1 > luku3 && luku1 > luku4 && luku1 > luku5)
+            {
+                Console.WriteLine("Suurin luku on: " + luku1);
+            }
+            else if (luku2 > luku1 && luku2 > luku3 && luku2 > luku4 && luku2 > luku5)
+            {
+                Console.WriteLine("Suurin luku on: " + luku2);
+            }
+            else if (luku3 > luku1 && luku3 > luku2 && luku3 > luku4 && luku3 > luku5)
+            {
+                Console.WriteLine("Suurin luku on: " + luku3);
+            }
+            else if (luku4 > luku1 && luku4 > luku2 && luku4 > luku3 && luku4 > luku5)
+            {
+                Console.WriteLine("Suurin luku on: " + luku4);
+            }
+            else
+            {
+                Console.WriteLine("Suurin luku on: " + luku5);
+            }
+        }
+    }
+}
