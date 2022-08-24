@@ -1,0 +1,36 @@
+using System;
+
+namespace Harjoituksia_C6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Pyydetään käyttäjältä bonuspisteiden määrä ja tallennetaan se
+            Console.Write("Bonuspisteet (1-9): ");
+            int bonus = int.Parse(Console.ReadLine());
+            // Switch case rakenne, joka tulostaa ja kertoo bonuspisteet riippuen niiden määrästä
+            switch(bonus)
+            {
+                case 1:
+                case 2:
+                case 3:
+                    Console.WriteLine(bonus * 10);
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    Console.WriteLine(bonus * 100);
+                    break;
+                case 7:
+                case 8:
+                case 9:
+                    Console.WriteLine(bonus * 1000);
+                    break;
+                default:
+                    Console.WriteLine("Syöte virheellinen.");
+                    break;
+            }
+        }
+    }
+}
