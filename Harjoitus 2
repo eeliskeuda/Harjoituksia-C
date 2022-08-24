@@ -1,0 +1,32 @@
+using System;
+
+namespace Harjoituksia_C2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Pyydetään käyttäjältä kolme lukua ja tallennetaan ne
+            Console.WriteLine("Syötä 3 kokonaislukua ja tulostan niistä suurimman: ");
+            int luku1 = int.Parse(Console.ReadLine());
+            int luku2 = int.Parse(Console.ReadLine());
+            int luku3 = int.Parse(Console.ReadLine());
+            // if rakenne joka vertaa tallennettuja lukuja ja tulostaa suurimman niistä
+            if(luku1 > luku2 && luku1 > luku3)
+            {
+                // Tulostetaan jos luku1 on suurin
+                Console.WriteLine("Suurin luku on: " + luku1);
+            }
+            else if(luku2 > luku1 && luku2 > luku3)
+            {
+                // Tulostetaan jos luku2 on suurin
+                Console.WriteLine("Suurin luku on: " + luku2);
+            }
+            else
+            {
+                // Tulostetaan jos luku3 on suurin
+                Console.WriteLine("Suurin luku on: " + luku3);
+            }
+        }
+    }
+}
