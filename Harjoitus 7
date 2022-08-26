@@ -1,0 +1,93 @@
+using System;
+
+namespace Harjoituksia_C7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Pyydetään käyttäjää syöttänään numero väliltä 0-999 ja tallennetaan se
+            Console.Write("Syötä numero (0-999), niin muutan sen sanaksi: ");
+            int luku = int.Parse(Console.ReadLine());
+            if (luku == 0)
+            {
+                Console.WriteLine("Nolla"); // Tulostetaan jos luku on nolla
+            }
+            else if (luku > 999)
+            {
+                Console.WriteLine("Syöte virheellinen."); // Tulostetaan jos luku on suurempi kuin 999
+            }
+            else
+            {
+                int sadat = luku / 100;                         // Tallennetaan luvusta sadat
+                if (luku >= 100) luku = luku - sadat * 100;     // Vähennetään luvusta sadat
+                int kymmenet = luku / 10;                       // Tallennetaan luvusta kymmenet
+                if (luku >= 10) luku = luku - kymmenet * 10;    // Vähennetään luvusta kymmenet
+                                                                // "luku" muuttujaan jää jäljelle ykköset
+                switch (sadat)
+                {
+                    case 1: Console.Write("Sata "); break;
+                    case 2: Console.Write("Kaksisataa "); break;
+                    case 3: Console.Write("Kolmesataa "); break;
+                    case 4: Console.Write("Neljäsataa "); break;
+                    case 5: Console.Write("Viisisataa "); break;
+                    case 6: Console.Write("Kuusisataa "); break;
+                    case 7: Console.Write("Seitsemänsataa "); break;
+                    case 8: Console.Write("Kahdeksansataa "); break;
+                    case 9: Console.Write("Yhdeksänsataa "); break;
+                    default: break;
+                }
+
+                if (kymmenet == 1 && luku == 0)
+                {
+                    Console.Write("kymmenen ");
+                }
+                else if (kymmenet == 1 && luku > 0)
+                {
+                    switch (luku)
+                    {
+                        case 1: Console.Write("yksitoista "); break;
+                        case 2: Console.Write("kaksitoista "); break;
+                        case 3: Console.Write("kolmetoista "); break;
+                        case 4: Console.Write("neljätoista "); break;
+                        case 5: Console.Write("viisitoista "); break;
+                        case 6: Console.Write("kuusitoista "); break;
+                        case 7: Console.Write("seitsemäntoista "); break;
+                        case 8: Console.Write("kahdeksantoista "); break;
+                        case 9: Console.Write("yhdeksäntoista "); break;
+                        default: break;
+                    }
+                }
+                else
+                {
+                    switch (kymmenet)
+                    {
+                        case 2: Console.Write("kaksikymmentä "); break;
+                        case 3: Console.Write("kolmekymmentä "); break;
+                        case 4: Console.Write("neljäkymmentä "); break;
+                        case 5: Console.Write("viisikymmentä "); break;
+                        case 6: Console.Write("kuusikymmentä "); break;
+                        case 7: Console.Write("seitsemänkymmentä "); break;
+                        case 8: Console.Write("kahdeksankymmentä "); break;
+                        case 9: Console.Write("yhdeksänkymmentä "); break;
+                        default: break;
+                    }
+
+                    switch (luku)
+                    {
+                        case 1: Console.Write("yksi "); break;
+                        case 2: Console.Write("kaksi "); break;
+                        case 3: Console.Write("kolme "); break;
+                        case 4: Console.Write("neljä "); break;
+                        case 5: Console.Write("viisi "); break;
+                        case 6: Console.Write("kuusi "); break;
+                        case 7: Console.Write("seitsemän "); break;
+                        case 8: Console.Write("kahdeksan "); break;
+                        case 9: Console.Write("yhdeksän "); break;
+                        default: break;
+                    }
+                }
+            }
+        }
+    }
+}
